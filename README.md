@@ -20,3 +20,4 @@ This project demonstrates a simple DevSecOps CI pipeline using GitHub Actions.
 
 ## Purpose
 Showcase secure software delivery practices in a regulated environment.
+# DevSecOps demo with SonarCloud
