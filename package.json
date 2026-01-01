@@ -1,0 +1,9 @@
+{
+	"name": "devsecops-demo",
+	"version": "1.0.0",
+	"main":	"apps.js",
+	"scripts": {
+	  "start": "node app.js"
+
+	}
+      }
