@@ -1,0 +1,23 @@
+name: DevSecOps CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t devsecops-demo .
+
+      - name: Trivy vulnerability scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: devsecops-demo
+          severity: CRITICAL,HIGH
+          exit-code: 0
